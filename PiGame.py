@@ -17,7 +17,7 @@ def randomColor():
     return randint(0, 255)
 
 def playerColor():
-    return 255
+    return (0, 255, 0)
 
 def displayMatrix(matrix):
     for x in range(0, len(matrix)):
@@ -26,10 +26,57 @@ def displayMatrix(matrix):
             unicorn.set_pixel(x, y, rgb[0], rgb[1], rgb[2])
     unicorn.show()
 
-display = emptyMatrix()
-display[0][0] = (0,255,0)
-display[0][1] = (0,255,0)
-display[1][1] = (0,255,0)
-display[1][0] = (0,255,0)
-displayMatrix(display)
-time.sleep(3)
+def standingStill():
+    display = emptyMatrix()
+    player = playerColor()
+    display[0][0] = player
+    display[0][1] = player
+    display[1][1] = player
+    display[1][0] = player
+    display[2][0] = player
+    display[3][0] = player
+    display[4][0] = player
+    display[5][0] = player
+    display[6][0] = player
+    display[7][0] = player
+    return display
+
+def kick3():
+    display = emptyMatrix()
+    player = playerColor()
+    display[0][0] = player
+    display[0][1] = player
+    display[1][1] = player
+    display[1][0] = player
+    display[2][0] = player
+    display[3][0] = player
+    display[4][0] = player
+    display[5][0] = player
+    display[6][0] = player
+    display[7][0] = player
+    display[6][1] = player
+    display[7][2] = player
+    return display
+
+def kick2():
+    display = emptyMatrix()
+    player = playerColor()
+    display[0][0] = player
+    display[0][1] = player
+    display[1][1] = player
+    display[1][0] = player
+    display[2][0] = player
+    display[3][0] = player
+    display[4][0] = player
+    display[5][0] = player
+    display[6][0] = player
+    display[7][0] = player
+    display[6][1] = player
+    display[7][2] = player
+    return display
+
+displayMatrix(standingStill())
+time.sleep(2)
+displayMatrix(kick3())
+time.sleep(0.5)
+displayMatrix(standingStill())

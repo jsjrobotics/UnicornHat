@@ -11,7 +11,12 @@ turtle.hideturtle()
 width = 8
 height = 8
 noColor = (-1,-1,-1)
-display = [[noColor for x in range(width)] for y in range(height)] 
+
+def playerColor():
+    return (0, 255, 0)
+
+def emptyMatrix():
+    return [[noColor for x in range(width)] for y in range(height)]
 
 def displayMatrix(matrix):
     turtle.clear()
@@ -36,9 +41,59 @@ def displayMatrix(matrix):
 
             turtle.forward(10)
     t.update()
-    time.sleep(0.2)
 
-display[5][3] = (0,255,0)
-displayMatrix(display)
-display[5][3] = noColor
-displayMatrix(display)
+
+def standingStill():
+    display = emptyMatrix()
+    player = playerColor()
+    display[0][0] = player
+    display[0][1] = player
+    display[1][1] = player
+    display[1][0] = player
+    display[2][0] = player
+    display[3][0] = player
+    display[4][0] = player
+    display[5][0] = player
+    display[6][0] = player
+    display[7][0] = player
+    return display
+
+def kick3():
+    display = emptyMatrix()
+    player = playerColor()
+    display[0][0] = player
+    display[0][1] = player
+    display[1][1] = player
+    display[1][0] = player
+    display[2][0] = player
+    display[3][0] = player
+    display[4][0] = player
+    display[5][0] = player
+    display[6][0] = player
+    display[7][0] = player
+    display[6][1] = player
+    display[7][2] = player
+    return display
+
+def kick2():
+    display = emptyMatrix()
+    player = playerColor()
+    display[0][0] = player
+    display[0][1] = player
+    display[1][1] = player
+    display[1][0] = player
+    display[2][0] = player
+    display[3][0] = player
+    display[4][0] = player
+    display[5][0] = player
+    display[6][0] = player
+    display[7][0] = player
+    display[6][1] = player
+    display[7][2] = player
+    return display
+
+displayMatrix(standingStill())
+time.sleep(2)
+displayMatrix(kick3())
+time.sleep(0.5)
+displayMatrix(standingStill())
