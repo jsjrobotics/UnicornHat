@@ -176,10 +176,10 @@ def kick6():
     display[5][0] = player
     display[6][0] = player
     display[7][0] = player
-    display[6][2] = player
+    display[6][3] = player
     display[5][1] = player
     display[5][2] = player
-    display[7][3] = player
+    display[7][4] = player
     return display
 
 while True:
