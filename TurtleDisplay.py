@@ -58,7 +58,7 @@ def standingStill():
     display[7][0] = player
     return display
 
-def kick3():
+def kick1():
     display = emptyMatrix()
     player = playerColor()
     display[0][0] = player
@@ -71,8 +71,6 @@ def kick3():
     display[5][0] = player
     display[6][0] = player
     display[7][0] = player
-    display[6][1] = player
-    display[7][2] = player
     return display
 
 def kick2():
@@ -89,11 +87,123 @@ def kick2():
     display[6][0] = player
     display[7][0] = player
     display[6][1] = player
+    return display
+
+def kick3():
+    display = emptyMatrix()
+    player = playerColor()
+    display[0][0] = player
+    display[0][1] = player
+    display[1][1] = player
+    display[1][0] = player
+    display[2][0] = player
+    display[3][0] = player
+    display[4][0] = player
+    display[5][0] = player
+    display[6][0] = player
+    display[7][0] = player
+    display[6][1] = player
+    display[5][1] = player
+    return display
+
+def kick4():
+    display = emptyMatrix()
+    player = playerColor()
+    display[0][0] = player
+    display[0][1] = player
+    display[1][1] = player
+    display[1][0] = player
+    display[2][0] = player
+    display[3][0] = player
+    display[4][0] = player
+    display[5][0] = player
+    display[6][0] = player
+    display[7][0] = player
+    display[6][1] = player
+    display[5][1] = player
+    display[5][2] = player
+    return display
+
+def kick4():
+    display = emptyMatrix()
+    player = playerColor()
+    display[0][0] = player
+    display[0][1] = player
+    display[1][1] = player
+    display[1][0] = player
+    display[2][0] = player
+    display[3][0] = player
+    display[4][0] = player
+    display[5][0] = player
+    display[6][0] = player
+    display[7][0] = player
+    display[6][2] = player
+    display[5][1] = player
+    display[5][2] = player
+    display[7][1] = player
+    return display
+
+def kick5():
+    display = emptyMatrix()
+    player = playerColor()
+    display[0][0] = player
+    display[0][1] = player
+    display[1][1] = player
+    display[1][0] = player
+    display[2][0] = player
+    display[3][0] = player
+    display[4][0] = player
+    display[5][0] = player
+    display[6][0] = player
+    display[7][0] = player
+    display[6][2] = player
+    display[5][1] = player
+    display[5][2] = player
     display[7][2] = player
     return display
 
-displayMatrix(standingStill())
-time.sleep(2)
-displayMatrix(kick3())
-time.sleep(0.5)
-displayMatrix(standingStill())
+def kick6():
+    display = emptyMatrix()
+    player = playerColor()
+    display[0][0] = player
+    display[0][1] = player
+    display[1][1] = player
+    display[1][0] = player
+    display[2][0] = player
+    display[3][0] = player
+    display[4][0] = player
+    display[5][0] = player
+    display[6][0] = player
+    display[7][0] = player
+    display[6][2] = player
+    display[5][1] = player
+    display[5][2] = player
+    display[7][3] = player
+    return display
+
+while True:
+    displayMatrix(standingStill())
+    time.sleep(2)
+    displayMatrix(kick1())
+    time.sleep(0.1)
+    displayMatrix(kick2())
+    time.sleep(0.1)
+    displayMatrix(kick3())
+    time.sleep(0.1)
+    displayMatrix(kick4())
+    time.sleep(0.1)
+    displayMatrix(kick5())
+    time.sleep(0.1)
+    displayMatrix(kick6())
+    time.sleep(0.1)
+    displayMatrix(kick5())
+    time.sleep(0.1)
+    displayMatrix(kick4())
+    time.sleep(0.1)
+    displayMatrix(kick3())
+    time.sleep(0.1)
+    displayMatrix(kick2())
+    time.sleep(0.1)
+    displayMatrix(kick1())
+    time.sleep(0.1)
+    displayMatrix(standingStill())
