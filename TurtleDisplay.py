@@ -21,13 +21,13 @@ def displayMatrix(matrix):
         turtle.forward(10 * xIndex)
         turtle.left(90)
         for y in range(0, len(matrix[xIndex])):
-            colorTuple = matrix[xIndex][y]
-            if (colorTuple == noColor):
+            rgb = matrix[xIndex][y]
+            if (rgb == noColor):
                 turtle.pendown()
                 turtle.circle(5)
                 turtle.penup()
             else:
-                turtle.color(colorTuple[0], colorTuple[1], colorTuple[2])
+                turtle.color(rgb[0], rgb[1], rgb[2])
                 turtle.begin_fill()
                 turtle.circle(5)
                 turtle.end_fill()

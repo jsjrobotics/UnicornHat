@@ -27,19 +27,9 @@ def displayMatrix(matrix):
     unicorn.show()
 
 display = emptyMatrix()
-display[5][3] = (0,255,0)
+display[0][0] = (0,255,0)
+display[0][1] = (0,255,0)
+display[1][1] = (0,255,0)
+display[0][1] = (0,255,0)
 displayMatrix(display)
-time.sleep(2)
-display = emptyMatrix()
-displayMatrix(display)
-time.sleep(2)
-display[2][4] = (97,14,0)
-displayMatrix(display)
-time.sleep(2)
-
-def playerCharacter(xPosition, yPosition, matrix):
-    playerColor = playerColor()
-    matrix[yPosition][xPosition] = playerColor
-    matrix[yPosition+1][xPosition] = playerColor
-    matrix[yPosition][xPosition+1] = playerColor
-
+time.sleep(3)
