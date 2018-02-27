@@ -8,7 +8,7 @@ unicorn.rotation(0)
 unicorn.brightness(0.5)
 width,height=unicorn.get_shape()
 noColor = (0,0,0)
-animationDelay=0.05
+animationDelay=0.1
 
 def emptyMatrix():
     return [[noColor for x in range(width)] for y in range(height)]
