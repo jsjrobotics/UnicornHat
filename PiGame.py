@@ -193,5 +193,4 @@ def kickAnimation():
         displayMatrix(standingStill())
 
 
-displayMatrix(kick6())
-time.sleep(3)
+kickAnimation()
